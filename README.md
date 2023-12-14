@@ -12,32 +12,28 @@ This repository serves as a definitive guide for using the Fabric API in various
 ```plaintext
 microsoft-fabric-deployment-guide/
 │
-├── docs/                       # Documentation files
-│   ├── getting-started.md      # Getting started guide
-│   ├── architecture-overview.md # Overview of architectures
-│   └── best-practices.md       # Best practices in deployment
+├── docs/                           # Documentation files
+│ ├── architecture-overview.md      # Detailed architecture overview
+│ ├── best-practices.md             # Deployment best practices
+│ └── getting-started.md            # Getting started with the Fabric API
 │
-├── examples/                   # Practical example projects
-│   ├── basic-deployment/       # Basic deployment examples
-│   ├── advanced-deployment/    # Advanced deployment scenarios
-│   └── real-world-cases/       # Real-world use cases
+├── examples/ # Deployment examples
+│ ├── advanced-deployment/          # Advanced deployment scenarios
+│ ├── basic-deployment/             # Basic deployment examples
+│ └── real-world-cases/             # Real-world use cases and solutions
 │
-├── scripts/                    # Useful scripts for deployment
-│   ├── setup/                  # Setup and installation scripts
-│   └── utilities/              # Utility scripts
+├── resources/                      # Additional resources
+│ ├── templates/                    # Deployment and configuration templates
+│ └── links.md                      # Curated links to external references and documentation
 │
-├── tests/                      # Test scripts and scenarios
+├── scripts/                        # Utility scripts
+│ ├── setup/                        # Setup scripts for environment preparation
+│ └── utilities/                    # Helper scripts for common tasks
 │
-├── resources/                  # Additional resources
-│   ├── templates/              # Deployment templates
-│   └── links.md                # Links to external resources
+├── tests/                          # Test cases and validation scripts
 │
-├── .github/                    # GitHub related files
-│   ├── ISSUE_TEMPLATE/         # Issue templates
-│   └── PULL_REQUEST_TEMPLATE/  # Pull request templates
-│
-├── LICENSE                     # The license file
-└── README.md                   # The main README file
+└── tutorials/                      # Step-by-step tutorials
+└── rest-api-usage/                 # Tutorial on using REST APIs with the Fabric API
 ```
 
 ### Getting Started
