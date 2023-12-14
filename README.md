@@ -9,38 +9,26 @@ This repository serves as a definitive guide for using the Fabric API in various
 
 ### Repository Structure
 
-```plaintext
-microsoft-fabric-deployment-guide/
-│
-├── docs/                           # Documentation files
-│ ├── architecture-overview.md      # Detailed architecture overview
-│ ├── best-practices.md             # Deployment best practices
-│ └── getting-started.md            # Getting started with the Fabric API
-│
-├── architectures/                  # Architectural guidelines and references
-│ 
-├── examples/                       # Deployment examples
-│ ├── advanced-deployment/          # Advanced deployment scenarios
-│ ├── basic-deployment/             # Basic deployment examples
-│ └── real-world-cases/             # Real-world use cases and solutions
-│
-├── integrations/                   # Integration strategies with other systems
-│
-├── patterns/                       # Design and architectural patterns
-│
-├── resources/                      # Additional resources
-│ ├── templates/                    # Deployment and configuration templates
-│ └── links.md                      # Curated links to external references and documentation
-│
-├── scripts/                        # Utility scripts
-│ ├── setup/                        # Setup scripts for environment preparation
-│ └── utilities/                    # Helper scripts for common tasks
-│
-├── tests/                          # Test cases and validation scripts
-│
-└── tutorials/                      # Step-by-step tutorials
-└── rest-api-usage/                 # Tutorial on using REST APIs with the Fabric API
-```
+- **docs/** - [Documentation files](docs/)
+  - [architecture-overview.md](docs/architecture-overview.md) - Detailed architecture overview
+  - [best-practices.md](docs/best-practices.md) - Deployment best practices
+  - [getting-started.md](docs/getting-started.md) - Getting started with the Fabric API
+- **architectures/** - [Architectural guidelines and references](architectures/)
+- **examples/** - [Deployment examples](examples/)
+  - [advanced-deployment/](examples/advanced-deployment/) - Advanced deployment scenarios
+  - [basic-deployment/](examples/basic-deployment/) - Basic deployment examples
+  - [real-world-cases/](examples/real-world-cases/) - Real-world use cases and solutions
+- **integrations/** - [Integration strategies with other systems](integrations/)
+- **patterns/** - [Design and architectural patterns](patterns/)
+- **resources/** - [Additional resources](resources/)
+  - [templates/](resources/templates/) - Deployment and configuration templates
+  - [links.md](resources/links.md) - Curated links to external references and documentation
+- **scripts/** - [Utility scripts](scripts/)
+  - [setup/](scripts/setup/) - Setup scripts for environment preparation
+  - [utilities/](scripts/utilities/) - Helper scripts for common tasks
+- **tests/** - [Test cases and validation scripts](tests/)
+- **tutorials/** - [Step-by-step tutorials](tutorials/)
+  - [rest-api-usage/](tutorials/rest-api-usage/) - Tutorial on using REST APIs with the Fabric API
 
 ### Getting Started
 
