@@ -9,6 +9,7 @@ This repository serves as a definitive guide for using the Fabric API in various
 
 ### Repository Structure
 
+```
 [microsoft-fabric-deployment-guide/](.)
 
 ├── README.md                                # Start Here
@@ -40,6 +41,7 @@ This repository serves as a definitive guide for using the Fabric API in various
 │
 └── [tutorials/](tutorials/)                      # Step-by-step tutorials
     └── [rest-api-usage/](tutorials/rest-api-usage/)                 # Tutorial on using REST APIs with the Fabric API
+```
 
 ### Getting Started
 
