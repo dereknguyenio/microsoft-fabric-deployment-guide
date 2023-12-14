@@ -17,10 +17,16 @@ microsoft-fabric-deployment-guide/
 │ ├── best-practices.md             # Deployment best practices
 │ └── getting-started.md            # Getting started with the Fabric API
 │
+├── architectures/                  # Architectural guidelines and references
+│ 
 ├── examples/                       # Deployment examples
 │ ├── advanced-deployment/          # Advanced deployment scenarios
 │ ├── basic-deployment/             # Basic deployment examples
 │ └── real-world-cases/             # Real-world use cases and solutions
+│
+├── integrations/                   # Integration strategies with other systems
+│
+├── patterns/                       # Design and architectural patterns
 │
 ├── resources/                      # Additional resources
 │ ├── templates/                    # Deployment and configuration templates
