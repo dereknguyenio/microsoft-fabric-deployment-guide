@@ -9,34 +9,36 @@ This repository serves as a definitive guide for using the Fabric API in various
 
 ### Repository Structure
 
+```plaintext
 microsoft-fabric-deployment-guide/
 │
-├── docs/ # Documentation files
-│ ├── getting-started.md # Getting started guide
-│ ├── architecture-overview.md # Overview of architectures
-│ └── best-practices.md # Best practices in deployment
+├── docs/                       # Documentation files
+│   ├── getting-started.md      # Getting started guide
+│   ├── architecture-overview.md # Overview of architectures
+│   └── best-practices.md       # Best practices in deployment
 │
-├── examples/ # Practical example projects
-│ ├── basic-deployment/ # Basic deployment examples
-│ ├── advanced-deployment/ # Advanced deployment scenarios
-│ └── real-world-cases/ # Real-world use cases
+├── examples/                   # Practical example projects
+│   ├── basic-deployment/       # Basic deployment examples
+│   ├── advanced-deployment/    # Advanced deployment scenarios
+│   └── real-world-cases/       # Real-world use cases
 │
-├── scripts/ # Useful scripts for deployment
-│ ├── setup/ # Setup and installation scripts
-│ └── utilities/ # Utility scripts
+├── scripts/                    # Useful scripts for deployment
+│   ├── setup/                  # Setup and installation scripts
+│   └── utilities/              # Utility scripts
 │
-├── tests/ # Test scripts and scenarios
+├── tests/                      # Test scripts and scenarios
 │
-├── resources/ # Additional resources
-│ ├── templates/ # Deployment templates
-│ └── links.md # Links to external resources
+├── resources/                  # Additional resources
+│   ├── templates/              # Deployment templates
+│   └── links.md                # Links to external resources
 │
-├── .github/ # GitHub related files
-│ ├── ISSUE_TEMPLATE/ # Issue templates
-│ └── PULL_REQUEST_TEMPLATE/ # Pull request templates
+├── .github/                    # GitHub related files
+│   ├── ISSUE_TEMPLATE/         # Issue templates
+│   └── PULL_REQUEST_TEMPLATE/  # Pull request templates
 │
-├── LICENSE # The license file
-└── README.md # The main README file
+├── LICENSE                     # The license file
+└── README.md                   # The main README file
+```
 
 ### Getting Started
 
