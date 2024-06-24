@@ -22,6 +22,20 @@ Ensure you have the following prerequisites before running the notebook:
 3. **Azure Key Vault**:
    - Your Azure Key Vault should store the client secret needed for authentication.
    - Set the Key Vault name and secret name in the notebook.
+  
+4. **API Permissions**:
+   - Ensure the app registration has the necessary permissions to interact with the Fabric API. The following permissions should be granted:
+     - Microsoft Graph:
+       - `User.Read`
+     - Power BI Service:
+       - `Capacity.ReadWrite.All`
+       - `Workspace.ReadWrite.All`
+
+5. **Workspace Access**:
+   - Assign the app registration to the Fabric workspace to have access to the artifacts within the workspace:
+     - Navigate to the workspace.
+     - Click on `Manage access`.
+     - Add the app registration (e.g., `Fabric POC App`) and assign the appropriate role (Admin, Contributor, or Member required).
 
 ## Steps
 
