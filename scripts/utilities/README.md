@@ -1,4 +1,4 @@
-# Workspace Migration to F Capacity
+# PowerBI Workspace Migration to Fabric Capacity
 
 This notebook provides a step-by-step guide to migrating Power BI workspaces to F Capacity based on Capacity and Workspace IDs.
 
