@@ -39,6 +39,19 @@ os.environ['AZURE_CLIENT_SECRET'] = '<CLIENT SECRET>'
 ### 2. Retrieve Client Secret from Azure Key Vault
 Fetch the client secret from Azure Key Vault using the azure-identity and azure-keyvault-secrets packages.
 
+```
+from azure.identity import EnvironmentCredential
+from azure.keyvault.secrets import SecretClient
+
+key_vault_name = "<KEY_VAULT_NAME>"
+secret_name = "<KEY_VAULT_SECRET>"
+vault_url = f"https://{key_vault_name}.vault.azure.net"
+credential = EnvironmentCredential()
+secret_client = SecretClient(vault_url=vault_url, credential=credential)
+
+retrieved_secret = secret_client.get_secret(secret_name)
+client_secret = retrieved_secret.value
+```
 ### 3. Acquire Token for Microsoft Fabric API
 Use the msal package to acquire an access token for the Microsoft Fabric API.
 
