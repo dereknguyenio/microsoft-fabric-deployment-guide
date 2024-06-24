@@ -44,7 +44,6 @@ Ensure you have the following prerequisites before running the notebook:
      2. Click on `Manage access`.
      3. Add the app registration (e.g., `Fabric POC App`) and assign the appropriate role (Admin, Contributor, or Member required).
 
-   ![Workspace Access](path/to/your/screenshot.png)
 ## Steps
 
 ### 1. Set Environment Variables
