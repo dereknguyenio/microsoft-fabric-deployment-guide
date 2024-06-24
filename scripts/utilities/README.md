@@ -30,6 +30,7 @@ Ensure you have the following prerequisites before running the notebook:
      - Power BI Service:
        - `Capacity.ReadWrite.All`
        - `Workspace.ReadWrite.All`
+   - Click here to learn more about how to create an App Registration: https://learn.microsoft.com/en-us/rest/api/fabric/articles/get-started/fabric-api-quickstart#create-app-registration 
 
 5. **Workspace Access**:
    - Assign the app registration to the Fabric workspace to have access to the artifacts within the workspace:
