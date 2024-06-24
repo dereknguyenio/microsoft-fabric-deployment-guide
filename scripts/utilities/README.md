@@ -89,8 +89,35 @@ workspaces_url = "https://api.fabric.microsoft.com/v1/workspaces"
 workspaces_response = requests.get(workspaces_url, headers=headers)
 workspaces = workspaces_response.json()["value"] if workspaces_response.status_code == 200 else []
 ```
-### 5. Map Workspaces to New Capacities
-Define the mapping from legacy capacities to new Fabric capacities using capacity IDs and display the mappings.
+### 5. Select and Assign Workspaces to Capacities
+Select the capacity and workspaces for assignment and assign them accordingly.
+
+```
+# Select capacity and workspaces for assignment
+if capacities:
+    selected_capacity_id = input("Enter Capacity ID to assign workspaces to: ")
+
+    print("Select workspaces to assign (comma-separated IDs):")
+    for workspace in workspaces:
+        print(f"ID: {workspace['id']}, Name: {workspace['displayName']}, Description: {workspace['description']}, Capacity ID: {workspace.get('capacityId', 'N/A')}")
+    selected_workspace_ids = input("Enter Workspace IDs: ").split(",")
+
+    # Assign workspaces to the selected capacity
+    for workspace_id in selected_workspace_ids:
+        assign_url = f"https://api.fabric.microsoft.com/v1/workspaces/{workspace_id}/assignToCapacity"
+        data = {"capacityId": selected_capacity_id}
+        assign_response = requests.post(assign_url, headers=headers, json=data)
+
+        if assign_response.status_code in [200, 202]:
+            print(f"Workspace {workspace_id} assigned successfully to capacity {selected_capacity_id}.")
+        else:
+            print(f"Failed to assign workspace {workspace_id}: {assign_response.status_code} {assign_response.text}")
+else:
+    print("No capacities available to select.")
+```
+
+### Optional: Map Workspaces to New Capacities
+Second option allows you to define the mapping from legacy capacities to new Fabric capacities using capacity IDs and display the mappings, so you can swap capacities at scale.
 
 ```
 capacity_mapping = {
