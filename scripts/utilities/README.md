@@ -24,21 +24,27 @@ Ensure you have the following prerequisites before running the notebook:
    - Set the Key Vault name and secret name in the notebook.
   
 4. **API Permissions**:
-   - Ensure the app registration has the necessary permissions to interact with the Fabric API. The following permissions should be granted:
-     - Microsoft Graph:
-       - `User.Read`
-     - Power BI Service:
-       - `Capacity.ReadWrite.All`
-       - `Workspace.ReadWrite.All`
-   - [Click here to learn more about how to create an App Registration](https://learn.microsoft.com/en-us/rest/api/fabric/articles/get-started/fabric-api-quickstart#create-app-registration)
+   - Ensure the app registration has the necessary permissions to interact with the Fabric API. Follow these steps:
+     1. Go to the [Azure portal](https://portal.azure.com/).
+     2. Navigate to "Azure Active Directory" > "App registrations".
+     3. Select your app registration (e.g., `Fabric POC App`).
+     4. Go to "API permissions" > "Add a permission".
+     5. Select "Microsoft Graph" and add the following Delegated permissions:
+        - `User.Read`
+     6. Select "APIs my organization uses" > "Power BI Service" and add the following Delegated permissions:
+        - `Capacity.ReadWrite.All`
+        - `Workspace.ReadWrite.All`
+   - Grant admin consent for the permissions.
 
+   [Click here to learn more about how to create an App Registration](https://learn.microsoft.com/en-us/rest/api/fabric/articles/get-started/fabric-api-quickstart#create-app-registration)
 
 5. **Workspace Access**:
    - Assign the app registration to the Fabric workspace to have access to the artifacts within the workspace:
-     - Navigate to the workspace.
-     - Click on `Manage access`.
-     - Add the app registration (e.g., `Fabric POC App`) and assign the appropriate role (Admin, Contributor, or Member required).
+     1. Navigate to the workspace.
+     2. Click on `Manage access`.
+     3. Add the app registration (e.g., `Fabric POC App`) and assign the appropriate role (Admin, Contributor, or Member required).
 
+   ![Workspace Access](path/to/your/screenshot.png)
 ## Steps
 
 ### 1. Set Environment Variables
