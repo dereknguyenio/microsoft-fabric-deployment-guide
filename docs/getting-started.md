@@ -95,20 +95,67 @@ else:
     raise Exception("Token acquisition failed:", result.get("error"), result.get("error_description"))
 
 ```
+### Making API Requests
 
-### 4. Retrieve Capacities and Workspaces
-Get the list of capacities and workspaces from the Microsoft Fabric API.
+You can interact with various endpoints provided by the Fabric API. Below are examples of common operations:
 
-```
+#### Example 1: Retrieve Capacities
+
+```python
 import requests
 
 headers = {'Authorization': 'Bearer ' + access_token}
 
 capacities_url = "https://api.fabric.microsoft.com/v1/capacities"
 capacities_response = requests.get(capacities_url, headers=headers)
-capacities = capacities_response.json()["value"] if capacities_response.status_code == 200 else []
+if capacities_response.status_code == 200:
+    capacities = capacities_response.json()["value"]
+    for capacity in capacities:
+        print(f"ID: {capacity['id']}, Name: {capacity['displayName']}")
+else:
+    print("Failed to retrieve capacities:", capacities_response.status_code, capacities_response.text)
+```
 
+#### Example 2: List Workspaces
+
+```
 workspaces_url = "https://api.fabric.microsoft.com/v1/workspaces"
 workspaces_response = requests.get(workspaces_url, headers=headers)
-workspaces = workspaces_response.json()["value"] if workspaces_response.status_code == 200 else []
+if workspaces_response.status_code == 200:
+    workspaces = workspaces_response.json()["value"]
+    for workspace in workspaces:
+        print(f"ID: {workspace['id']}, Name: {workspace['displayName']}")
+else:
+    print("Failed to retrieve workspaces:", workspaces_response.status_code, workspaces_response.text)
 ```
+
+#### Example 3: Assign Workspace to Capacity
+
+```
+workspace_id = "<WORKSPACE_ID>"
+capacity_id = "<CAPACITY_ID>"
+assign_url = f"https://api.fabric.microsoft.com/v1/workspaces/{workspace_id}/assignToCapacity"
+data = {"capacityId": capacity_id}
+assign_response = requests.post(assign_url, headers=headers, json=data)
+
+if assign_response.status_code in [200, 202]:
+    print(f"Workspace {workspace_id} assigned successfully to capacity {capacity_id}.")
+else:
+    print(f"Failed to assign workspace {workspace_id}: {assign_response.status_code} {assign_response.text}")
+```
+
+### Error Handling
+Implement robust error handling to manage API errors gracefully.
+```
+def handle_response(response):
+    if response.status_code == 200:
+        return response.json()
+    else:
+        print("Error:", response.status_code, response.text)
+        return None
+```
+
+### Conclusion
+By following this guide, you can start using the Fabric API to automate and integrate Microsoft Fabric with your existing systems. Refer to the official API documentation for detailed information on all available endpoints and their usage.
+
+For further assistance, consult the Microsoft Fabric documentation and community forums.
