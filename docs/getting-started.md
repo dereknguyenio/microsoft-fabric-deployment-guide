@@ -2,7 +2,7 @@
 
 ## Getting Started with the Fabric API
 
-This document provides a comprehensive, step-by-step guide to getting started with the Fabric API, including detailed instructions and best practices for successful implementation. This guide will focus on migrating Power BI workspaces to Fabric Capacity using the Fabric Python SDK.
+This document provides a comprehensive, step-by-step guide to getting started with the Fabric API, including detailed instructions and best practices for successful implementation. This guide will focus on migrating Power BI workspaces to Fabric Capacity using the Fabric API in Python.
 
 ### Prerequisites
 
