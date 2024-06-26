@@ -61,7 +61,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [dereknguyen@microsoft.com](mailto:dereknguyen@microsoft.com)
+Derek Nguyen - [dereknguyen@microsoft.com](mailto:dereknguyen@microsoft.com)
 
 Project Link: [https://github.com/dereknguyenio/microsoft-fabric-deployment-guide](https://github.com/dereknguyenio/microsoft-fabric-deployment-guide)
 
