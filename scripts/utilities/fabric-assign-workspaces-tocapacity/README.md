@@ -47,7 +47,7 @@ Ensure you have the following prerequisites before running the notebook:
 
 Below is the architecture diagram that outlines the workflow for migrating Power BI workspaces to F Capacity:
 
-![Architecture Diagram](../utilities/architecture-fabric-workspace-migration.png)
+![Architecture Diagram](../utilities/fabric-assign-workspaces-tocapacity/architecture-fabric-workspace-migration.png)
 
 ## Steps
 
