@@ -44,7 +44,7 @@ Ensure you have the following prerequisites before running the notebook:
      2. Click on `Manage access`.
      3. Add the app registration (e.g., `Fabric POC App`) and assign the appropriate role (Admin, Contributor, or Member required).
     
-6. Additional Permissions
+6. **Additional Permissions**:
    - The App Registration needs permissions to all of the workspaces it will be accessing.
    - The App Registration needs to be Capacity Administrator and granted Contributor Access to the Fabric Capacity that is deployed in Azure.
      
