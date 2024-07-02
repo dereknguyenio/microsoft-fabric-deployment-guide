@@ -43,6 +43,11 @@ Ensure you have the following prerequisites before running the notebook:
      1. Navigate to the workspace.
      2. Click on `Manage access`.
      3. Add the app registration (e.g., `Fabric POC App`) and assign the appropriate role (Admin, Contributor, or Member required).
+    
+6. Additional Permissions
+   - The App Registration needs permissions to all of the workspaces it will be accessing.
+   - The App Registration needs to be Capacity Administrator and granted Contributor Access to the Fabric Capacity that is deployed in Azure.
+     
 ## Architecture
 
 Below is the architecture diagram that outlines the workflow for migrating Power BI workspaces to F Capacity:
