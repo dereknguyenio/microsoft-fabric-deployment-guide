@@ -8,7 +8,7 @@ This end-to-end guide outlines the complete data flow and configuration steps re
 ### 1. Set Up and Configure Service Principals (SPs)
 
 - **Create Service Principal in Azure Active Directory (Entra ID):**
-  - Navigate to Entra ID and create a Service Principal named "Fabric SP POC DKN."
+  - Navigate to Entra ID and create a Service Principal named "Fabric SP POC"
   - Assign the necessary API permissions to the SP to interact with Databricks, Azure Data Lake Storage (ADLS) Gen2, and Microsoft Fabric.
 
   ![Service Principal Details](./images/adb-sp-details.png)
