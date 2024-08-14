@@ -2,6 +2,7 @@
 ## End-to-End Flow: Databricks + Fabric + Azure Data Factory Architecture
 
 This end-to-end guide outlines the complete data flow and configuration steps required to set up an architecture that integrates Azure Databricks, Microsoft Fabric, and Azure Data Factory (ADF).
+
  ![Architecture](./images/adb-fabric-architecture.png)
 
 ### 1. Set Up and Configure Service Principals (SPs)
