@@ -62,6 +62,8 @@ This end-to-end guide outlines the complete data flow and configuration steps re
 - **Create Storage Accounts:**
   - Create Azure Data Lake Storage Gen2 accounts with containers for each layer of data processing: Bronze, Silver, and Gold.
 
+  ![Storage IAM Role](./images/storage-iam-role.png)
+
 - **Set Access Permissions:**
   - Assign appropriate access permissions to allow Databricks and ADF to interact with these containers securely.
 
@@ -84,11 +86,15 @@ This end-to-end guide outlines the complete data flow and configuration steps re
       - Provides Microsoft Fabric the ability to access, modify, and store data within the ADLS Gen2 storage layers.
       - Ensures that processed data from Databricks can be synchronized with Fabric’s Lakehouses.
 
+  ![Fabric App Registration](./images/fabric-app-registration.png)
+
 ### 4. Set Up Azure Data Factory (ADF) Pipelines
 
 - **Create ADF Pipelines:**
   - In ADF, create data pipelines that manage the flow of data from the Bronze container to Silver and Gold containers.
   - These pipelines will trigger Databricks notebooks or jobs to process the data.
+
+  ![ADF Pipeline Permissions](./images/adb-sp-adf-permissions.png)
 
 - **Configure Linked Services in ADF:**
   - Set up a linked service in ADF to connect to the Databricks workspace. Use the Managed Identity authentication method to secure the connection.
@@ -106,6 +112,8 @@ This end-to-end guide outlines the complete data flow and configuration steps re
   - **Create a Service Principal (SP):**
     - Create a Service Principal named "Fabric SP POC" within the Databricks workspace under Identity and access settings.
     - This SP is associated with a unique Application ID (`<your-application-id>`), which is used to identify it when granting permissions.
+
+    ![Service Principal Setup](./images/adb-sp.png)
 
   - **Granting Permissions to the SP:**
     - Assign specific roles and permissions to this SP within Databricks to allow it to perform actions like running jobs, accessing storage, and interacting with other Azure services.
@@ -134,6 +142,8 @@ This end-to-end guide outlines the complete data flow and configuration steps re
 - **Set Up Fabric Lakehouses:**
   - Configure Lakehouses in Microsoft Fabric to correspond to the Bronze, Silver, and Gold layers.
   - Ensure that the processed data from Databricks is synchronized with the appropriate Lakehouse layers in Fabric.
+
+  ![Fabric Architecture](./images/adb-fabric-architecture.png)
 
 - **Use Fabric Capacity:**
   - Allocate and manage resources within Fabric to optimize the storage and processing of data across the Lakehouse layers.
